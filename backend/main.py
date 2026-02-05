@@ -18,7 +18,10 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://email-chat-app-gamma.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -31,7 +34,7 @@ users = {}
 # ---------------- OAUTH CONFIG ----------------
 CLIENT_ID = os.getenv("CLIENT_ID")
 CLIENT_SECRET = os.getenv("CLIENT_SECRET")
-REDIRECT_URI = "http://localhost:8000/auth/callback"
+REDIRECT_URI = "https://email-chat-app-ktgy.onrender.com/auth/callback"
 
 SCOPES = [
     "openid",
@@ -91,7 +94,7 @@ def callback(code: str):
     }
 
     return RedirectResponse(
-        url=f"http://localhost:5173/?user_email={user_email}"
+        url=f"https://email-chat-app-gamma.vercel.app/?user_email={user_email}"
     )
 
 

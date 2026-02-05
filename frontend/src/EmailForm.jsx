@@ -39,7 +39,7 @@ export default function EmailForm({ userEmail }) {
         }
 
         try {
-            const response = await fetch("http://localhost:8000/send", {
+            const response = await fetch("https://email-chat-app-ktgy.onrender.com/send", {
                 method: "POST",
                 body: formData,
             });

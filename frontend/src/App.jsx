@@ -21,7 +21,7 @@ export default function App() {
   }, []);
 
   function login() {
-    window.location.href = "http://localhost:8000/login";
+    window.location.href = "https://email-chat-app-ktgy.onrender.com/login";
   }
 
   function logout() {
