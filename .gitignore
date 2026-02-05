@@ -1,0 +1,27 @@
+# Root .gitignore for email-chat-demo
+
+# Backend
+backend/__pycache__/
+backend/venv/
+backend/.env
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Artifacts (optional - if you don't want to push brain folder)
+.gemini/
